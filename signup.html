@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - OpenShelf</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <h1>Create your account</h1>
+      <p>Join OpenShelf and start discovering books today!</p>
+
+      <form id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p class="message" id="message"></p>
+      <p class="login-link">Already have an account ? <a href="#">Log in</a></p>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

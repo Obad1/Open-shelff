@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Books | OpenShelf</title>
+    <link rel="stylesheet" href="audioPlayer.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">OpenShelf</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Book.html">Books</a>
+        <a href="audioPlayer.html" class="active">Audio Books</a>
+        <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+      </nav>
+    </header>
+
+    <main class="audio-content">
+      <h1>Community Audio Books</h1>
+      <p>
+        Listen to audio recordings contributed by our community to support
+        accessibility.
+      </p>
+
+      <div class="audio-search">
+        <input
+          type="text"
+          id="audioSearchInput"
+          placeholder="Search audio books..."
+        />
+      </div>
+
+      <div class="audio-grid" id="audioGrid">
+        <!-- Audio books will be loaded here by JS -->
+      </div>
+
+      <div class="contribute-section">
+        <h2>Contribute Your Voice</h2>
+        <p>
+          Help make books accessible to everyone by recording audio for your
+          favorite books.
+        </p>
+        <button id="contributeBtn" class="contribute-btn">
+          Contribute Recording
+        </button>
+      </div>
+    </main>
+
+    <script src="audioPlayer.js"></script>
+  </body>
+</html>

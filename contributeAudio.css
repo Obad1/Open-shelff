@@ -1,0 +1,165 @@
+.contribute-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contribute-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+.book-selection,
+.recording-section,
+.submission-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#bookSelect {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.recorder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.recorder-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.record-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+#startRecording {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#stopRecording {
+  background-color: #3498db;
+  color: white;
+}
+
+#playRecording {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.record-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.recorder-visualizer {
+  width: 100%;
+  height: 100px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#audioVisualizer {
+  width: 100%;
+  height: 100%;
+}
+
+.recorder-timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.recording-tips {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.recording-tips ul {
+  padding-left: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #5e2f91;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .recorder-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .record-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contribute-content {
+    padding: 1rem;
+  }
+  
+  .book-selection,
+  .recording-section,
+  .submission-section {
+    padding: 1rem;
+  }
+}

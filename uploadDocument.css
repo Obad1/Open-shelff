@@ -1,0 +1,184 @@
+/* Import base styles */
+@import url('audioPlayer.css');
+
+.upload-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+.upload-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.upload-section, 
+.upload-guidelines {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.file-upload-group {
+  margin-bottom: 1.5rem;
+}
+
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.file-upload-container input[type="file"] {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-upload-button {
+  background: #f0f0f0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.file-upload-button:hover {
+  background: #e0e0e0;
+}
+
+.file-name {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.file-requirements {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  background: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: #5e2f91;
+}
+
+.upload-guidelines {
+  align-self: start;
+}
+
+.upload-guidelines ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.upload-guidelines li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  margin-right: 0.8rem;
+}
+
+.benefit-text {
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .upload-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .upload-guidelines {
+    order: -1;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-content {
+    padding: 1rem;
+  }
+  
+  .upload-section, 
+  .upload-guidelines {
+    padding: 1rem;
+  }
+  
+  .file-upload-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .file-name {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

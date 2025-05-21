@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contribute Audio | OpenShelf</title>
+  <link rel="stylesheet" href="audioPlayer.css">
+  <link rel="stylesheet" href="contributeAudio.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">OpenShelf</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Book.html">Books</a>
+      <a href="audioPlayer.html">Audio Books</a>
+      <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+    </nav>
+  </header>
+
+  <main class="contribute-content">
+    <h1>Contribute Your Voice</h1>
+    <p>Help make books accessible by recording audio for your favorite books.</p>
+    
+    <div class="book-selection">
+      <h2>Step 1: Select a Book</h2>
+      <select id="bookSelect">
+        <option value="">-- Select a book --</option>
+        <!-- Books will be populated by JavaScript -->
+      </select>
+      <p>Can't find your book? <a href="#">Suggest a new book</a></p>
+    </div>
+    
+    <div class="recording-section">
+      <h2>Step 2: Record Your Audio</h2>
+      <div class="recorder-container">
+        <div class="recorder-controls">
+          <button id="startRecording" class="record-btn">Start Recording</button>
+          <button id="stopRecording" class="record-btn" disabled>Stop Recording</button>
+          <button id="playRecording" class="record-btn" disabled>Play Recording</button>
+        </div>
+        <div class="recorder-visualizer">
+          <canvas id="audioVisualizer"></canvas>
+        </div>
+        <div class="recorder-timer">00:00</div>
+      </div>
+      <div class="recording-tips">
+        <h3>Recording Tips:</h3>
+        <ul>
+          <li>Use a quiet environment with minimal background noise</li>
+          <li>Speak clearly and at a moderate pace</li>
+          <li>Use a good quality microphone if available</li>
+          <li>Test your recording before submitting</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="submission-section">
+      <h2>Step 3: Submit Your Recording</h2>
+      <form id="audioSubmissionForm">
+        <div class="form-group">
+          <label for="contributorName">Your Name (as you'd like it to appear)</label>
+          <input type="text" id="contributorName" required>
+        </div>
+        <div class="form-group">
+          <label for="recordingTitle">Recording Title</label>
+          <input type="text" id="recordingTitle" required>
+        </div>
+        <div class="form-group">
+          <label for="recordingDescription">Brief Description</label>
+          <textarea id="recordingDescription" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="termsAgreement" required>
+            I confirm this is my original recording and I grant OpenShelf permission to share it
+          </label>
+        </div>
+        <button type="submit" id="submitRecording" class="submit-btn" disabled>Submit Recording</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="contributeAudio.js"></script>
+</body>
+</html>

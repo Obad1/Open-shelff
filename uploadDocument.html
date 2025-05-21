@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Document | OpenShelf</title>
+  <link rel="stylesheet" href="uploadDocument.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">OpenShelf</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Book.html">Books</a>
+      <a href="audioPlayer.html">Audio Books</a>
+      <a href="uploadDocument.html" class="active">Upload</a>
+      <a href="signup.html"><button class="sign-up">Sign Up</button></a>
+    </nav>
+  </header>
+
+  <main class="upload-content">
+    <h1>Share Your Knowledge</h1>
+    <p>Upload your documents and contribute to our growing community library.</p>
+    
+    <div class="upload-container">
+      <div class="upload-section">
+        <h2>Upload Document</h2>
+        <form id="documentUploadForm">
+          <div class="form-group">
+            <label for="documentTitle">Document Title*</label>
+            <input type="text" id="documentTitle" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="authorName">Author Name*</label>
+            <input type="text" id="authorName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="documentCategory">Category*</label>
+            <select id="documentCategory" required>
+              <option value="">-- Select a category --</option>
+              <option value="education">Education</option>
+              <option value="science">Science</option>
+              <option value="literature">Literature</option>
+              <option value="technology">Technology</option>
+              <option value="arts">Arts</option>
+              <option value="history">History</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="documentDescription">Description</label>
+            <textarea id="documentDescription" rows="3"></textarea>
+          </div>
+          
+          <div class="form-group file-upload-group">
+            <label for="documentFile">Document File*</label>
+            <div class="file-upload-container">
+              <input type="file" id="documentFile" accept=".pdf,.doc,.docx,.txt" required>
+              <div class="file-upload-button">Choose File</div>
+              <div class="file-name">No file chosen</div>
+            </div>
+            <div class="file-requirements">
+              Accepted formats: PDF, DOC, DOCX, TXT (Max size: 10MB)
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="documentTags">Tags (comma separated)</label>
+            <input type="text" id="documentTags" placeholder="e.g., research, history, science">
+          </div>
+          
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="termsAgreement" required>
+              I confirm this is my original work or I have permission to share it, and I grant OpenShelf permission to make it available to the community*
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="licenseAgreement">
+              I want to license this work under Creative Commons (CC BY-SA 4.0)
+            </label>
+          </div>
+          
+          <button type="submit" id="submitDocument" class="submit-btn">Upload Document</button>
+        </form>
+      </div>
+      
+      <div class="upload-guidelines">
+        <h3>Upload Guidelines</h3>
+        <ul>
+          <li>Only upload content you've created or have permission to share</li>
+          <li>Ensure your document doesn't violate any copyright laws</li>
+          <li>Educational materials, research papers, and creative works are welcome</li>
+          <li>Documents will be reviewed before being published</li>
+          <li>Inappropriate or offensive content will be removed</li>
+        </ul>
+        
+        <div class="benefits-section">
+          <h3>Benefits of Sharing</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">👥</div>
+              <div class="benefit-text">Help others learn and grow</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🌟</div>
+              <div class="benefit-text">Gain recognition for your work</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔄</div>
+              <div class="benefit-text">Contribute to knowledge sharing</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🚀</div>
+              <div class="benefit-text">Build your digital portfolio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="uploadDocument.js"></script>
+</body>
+</html>
